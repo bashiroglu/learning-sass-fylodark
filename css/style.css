@@ -98,6 +98,7 @@ header a:hover {
 }
 
 .hero {
+  position: relative;
   background-color: #1b2330;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -110,6 +111,24 @@ header a:hover {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+}
+
+.hero:after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 40vw;
+  bottom: 0px;
+  background-image: url("/images/bg-curvy-mobile.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
 }
 
 .hero img {
@@ -131,5 +150,32 @@ header a:hover {
 
 .hero button {
   margin-top: 8px;
+}
+
+.fetaures-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 6vw 10vw;
+  max-width: 920px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media screen and (min-width: 899px) {
+  .fetaures-grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 999px) {
+  .fetaures-grid {
+    gap: 7vw 7vw;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
