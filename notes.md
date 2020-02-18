@@ -28,3 +28,20 @@ In order to use it we call map-get (map.get not sure )
             width: 185px;
     }
 ```
+
+In our design we have curved design in background, in order to have that design we can use :after pseudo element like below and set its bg to the photo we need.
+
+```
+&:after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 40vw;
+    bottom: 0px;
+    background-image: url('/images/bg-curvy-mobile.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+```
