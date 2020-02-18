@@ -17,6 +17,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
+    @include breakpoint(medium) {
+      background-image: url('/images/bg-curvy-desktop.svg');
+      height: 33vw;
+    }
   }
   > * {
     position: relative;
