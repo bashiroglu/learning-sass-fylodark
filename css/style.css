@@ -2,7 +2,9 @@ html {
   font-size: 100%;
 }
 
-*, *:after, *:before {
+*,
+*:after,
+*:before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -15,25 +17,36 @@ body {
   padding: 0;
 }
 
-*, a {
+*,
+a {
   color: #ffffff;
+}
+
+a,
+p {
+  margin-top: 0px;
+  margin-bottom: 1.5em;
+}
+
+@media screen and (min-width: 999px) {
+  a,
+  p {
+    font-size: 1rem;
+  }
 }
 
 a {
   text-decoration: none;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Raleway", sans-serif;
 }
 
-p {
-  margin-top: 0px;
-  margin-bottom: 1.5em;
-}
-
 section {
-  padding: 0 27px 160px;
+  background-color: #171e2a;
 }
 
 button {
@@ -51,6 +64,18 @@ button {
 button:hover {
   background: -webkit-gradient(linear, left top, right top, from(#329ecc), to(#329ecc));
   background: linear-gradient(to right, #329ecc, #329ecc);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 25px 20px 100px 20px;
+}
+
+@media screen and (min-width: 999px) {
+  .container {
+    padding: 73px 60px 87px 60px;
+  }
 }
 
 header {
@@ -126,7 +151,7 @@ header a:hover {
   background-position: bottom center;
 }
 
-@media screen and (min-width: 899px) {
+@media screen and (min-width: 699px) {
   .hero:after {
     background-image: url("/images/bg-curvy-desktop.svg");
     height: 33vw;
@@ -159,7 +184,7 @@ header a:hover {
   margin-top: 8px;
 }
 
-.fetaures-grid {
+.features .features-grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -171,18 +196,108 @@ header a:hover {
   padding-right: 20px;
 }
 
-@media screen and (min-width: 899px) {
-  .fetaures-grid {
+@media screen and (min-width: 699px) {
+  .features .features-grid {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (min-width: 999px) {
-  .fetaures-grid {
+  .features .features-grid {
     gap: 7vw 7vw;
     padding-left: 60px;
     padding-right: 60px;
   }
+}
+
+.features .feature {
+  text-align: center;
+}
+
+.features .feature-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90px;
+  margin-bottom: 30px;
+}
+
+.features .feature-image img {
+  height: 100%;
+  width: auto;
+}
+
+.features .feature-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.features .feature-description {
+  font-size: 1rem;
+}
+
+.productive__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 999px) {
+  .productive__grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    max-width: 1320px;
+  }
+}
+
+.productive__image {
+  text-align: center;
+}
+
+.productive__image img {
+  width: 100%;
+  max-width: 615px;
+}
+
+.productive__text h2 {
+  font-size: 1.3em;
+}
+
+@media screen and (min-width: 999px) {
+  .productive__text h2 {
+    max-width: 400px;
+  }
+}
+
+.productive__text a {
+  background-image: url("/images/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 25px;
+  color: #64e1d9;
+  border-bottom: 1px solid #64e1d9;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.productive__text a:hover {
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
 }
 /*# sourceMappingURL=style.css.map */
