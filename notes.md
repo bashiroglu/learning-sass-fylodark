@@ -33,7 +33,7 @@ In our design we have curved design in background, in order to have that design 
 
 ```
 &:after {
-    content: '';
+    content: '';//this is mandatory
     position: absolute;
     z-index: 0;
     width: 100%;
